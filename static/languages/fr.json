@@ -11,6 +11,7 @@
   "DONATE": "Faire un don",
   "PERMISSION_ADMINISTRATOR": "Administrateur",
   "ERROR_MISSING_PERMISSIONS": "Vous n'avez pas les permissions requises : {PERMISSIONS}.",
+  "ERROR_BOT_MISSING_PERMISSIONS": "Je n'ai pas les permissions requises : {permissions}.",
   "ERROR_INVALID_URL": "URL invalide.",
   "ERROR_INVALID_COLOR": "Couleur invalide. Utilisez un préréglage ou un code HEX valide.",
   "ERROR_INVALID_DURATION": "Format de durée invalide, ou dépasse {relativeTime} dans le futur.",
@@ -32,6 +33,8 @@
   "IMPORT": "Importer",
   "YES": "Oui",
   "NO": "Non",
+  "VIEW_DETAILS": "Voir les détails",
+  "LONG_ACTION_FOOTNOTE": "Cela peut prendre un moment.",
   "ERROR_INVALID_CHANNEL": "Vous devez fournir un salon {types} valide.",
   "ERROR_ONLY_OG_USER_MAY_USE_BTN": "Seul l'utilisateur de cette commande peut utiliser ce composant.",
   "TEXT_CHANNEL": "Textuel",
@@ -52,6 +55,7 @@
   "STICKERS": "Autocollants",
   "SERVERS": "Serveurs",
   "NONE": "Aucun(e)",
+  "UNKNOWN": "Inconnu",
   "CHANNELS": "Salons",
   "EMOJIS": "Émoji(s)",
   "ADDED": "Ajouté(e)",
@@ -119,7 +123,8 @@
       "PAST": "Les rappels ne peuvent pas être définis dans le passé.",
       "INVALID_FORMAT": "L'heure que vous avez saisie est dans un format invalide.",
       "TOO_LONG": "Les rappels ne peuvent pas être définis pour plus de 2 ans dans le futur.",
-      "REMINDERS_MAX_LIMIT": "Limite maximale de 10 rappels atteinte."
+      "REMINDERS_MAX_LIMIT": "Limite maximale de 10 rappels atteinte.",
+      "EVENT_NOT_FOUND": "L'événement Discord donné n'a pas été trouvé."
     },
     "strings": {
       "SUCCESS_TITLE": "Rappel créé ! Utilisez {command} pour gérer vos rappels.",
@@ -157,29 +162,16 @@
           "description": "Quand se termine-t-il ?"
         },
         "choice": {
-          "description": "Un des choix du sondage."
-        },
-        "image": {
-          "description": "Ajouter une image."
+          "description": "Une des réponses du sondage."
         }
       }
     },
     "errors": {
-      "CHOICE_EMPTY": "Un choix ne peut pas être vide (sans compter les émojis)."
+      "CHOICE_EMPTY": "Une réponse ne peut pas être vide (sans compter les émojis)."
     },
     "strings": {
-      "POLL_DESCRIPTION": "Se termine {TIME}.\nLe créateur peut afficher les données de vote avec le bouton {ICON}.",
-      "POLL_FOOTER_CREATOR": "{user} a créé un sondage",
-      "SUCCESS_TITLE": "Sondage créé !",
-      "SUCCESS_DESCRIPTION": "Vous pouvez voir les votes, éditer, supprimer ou terminer votre sondage plus tôt avec le bouton {ICON}.",
       "DATA_AND_OPTIONS": "Données et options",
-      "POLL_DATA_NOVOTES": "Aucun vote",
-      "POLL_DATA_FOOTER": "Rafraîchissez ces données en utilisant le bouton à nouveau.",
-      "SUCCESS_POLL_DELETED": "Sondage supprimé.",
-      "SUCCESS_POLL_ENDED": "Sondage terminé.",
-      "POLL_DESCRIPTION_ENDED": "Le sondage est terminé. Vous ne pouvez plus voter dessus.",
-      "POLL_RESULTS_TITLE": "C'est dans la boîte !",
-      "POLL_RESULTS_DESCRIPTION": "Le(s) choix {options} a/ont gagné avec {votes} vote(s)/{total} !"
+      "POLL_DATA_FOOTER": "Rafraîchissez ces données en utilisant le bouton à nouveau."
     }
   },
   "banner": {
@@ -242,6 +234,10 @@
   "USER_AVATAR": "Avatar utilisateur",
   "USER_BANNER": "Bannière utilisateur",
   "SERVER_INFO": "Infos sur le serveur",
+  "IDENTITY": "Identité",
+  "IDENTITY_UNIQUE_USERNAME": "Nom d'utilisateur unique : {username}",
+  "IDENTITY_GLOBAL_NAME": "Nom d'affichage global : {globalName}",
+  "IDENTITY_SERVER_NICKNAME": "Pseudo du serveur : {nickname}",
   "ICON": "Icône",
   "BANNER": "Bannière",
   "WARN": "Avertissement",
@@ -252,6 +248,8 @@
   "TEMPBAN": "Bannissement temporaire",
   "CLEAR": "Nettoyage",
   "REPORT": "Signalement",
+  "LOCK": "Vérrouiller",
+  "UNLOCK": "Déverrouiller",
   "REASON": "Motif",
   "MOD_VERB_BAN": "Banni(e)(s)",
   "MOD_VERB_TEMPBAN": "Banni temporairement",
@@ -260,11 +258,26 @@
   "MOD_VERB_TIMEOUT": "Exclu(e)",
   "MOD_VERB_WARN": "Averti(e)",
   "MOD_VERB_REPORT": "Signalé(e)",
+  "MOD_VERB_LOCK": "Verrouillé",
+  "MOD_VERB_UNLOCK": "Déverrouillé",
+  "MOD_VERB_UNBAN": "Débanni",
   "DESCRIPTION": "Description",
   "EXPIRES_AT": "Expire le",
+  "modlogs_all": {
+    "description": "Voir l'Historique de Modération du serveur."
+  },
+  "modlogs_user": {
+    "description": "Voir l'Historique de Modération d'un utilisateur."
+  },
+  "ENTRY_NO": "Entrée n°{number}",
+  "ENTRY": "Entrée",
+  "MODERATION_LOGS_ENTRIES_TOTAL": "{entries} entrées au total.",
   "MODERATION_LOGS_VIEW_EMPTY": "*Aucun Historique de Modération trouvé.*",
   "MODERATION_LOGS_VIEW_SELECT_MENU_PLACEHOLDER": "Afficher, modifier ou supprimer une entrée",
   "MODERATION_LOGS_VIEW_TITLE": "Historique de Modération dans {SERVER}",
+  "MODERATION_LOGS_BULK_DELETE_DESCRIPTION": "Choisissez les entrées à supprimer de l'Historique de Modération.",
+  "MODERATION_LOGS_BULK_DELETE_TITLE": "Suppression des entrées...",
+  "MODERATION_LOGS_BULK_DELETE_SUCCESS": "{number} entrées ont bien été supprimées.",
   "MODERATOR": "Modérateur",
   "REPORTED_BY": "Signalé par ",
   "JOIN_MESSAGE": "Message de bienvenue",
@@ -310,6 +323,7 @@
   "HELP_AD_TITLE": "Vous aimez CRBT ?",
   "HELP_AD_DESCRIPTION": "Invitez CRBT sur votre serveur !",
   "GIVEAWAY": "Concours",
+  "GIVEAWAYS": "Concours",
   "giveaway": {
     "description": "Créez un concours.",
     "options": {
@@ -321,8 +335,20 @@
       }
     }
   },
+  "PARTICIPANTS": "Participants",
   "WINNERS": "Nombre de gagnant(e)s",
   "PRIZE": "Prix",
+  "HOST": "Hôte",
+  "ENTER_GIVEAWAY": "Participer au concours",
+  "GIVEAWAY_SUCCESS_TITLE": "Concours créé !",
+  "GIVEAWAY_SUCCESS_DESCRIPTION": "Il se terminera {relativeTime}, mais vous pouvez le terminer prématurément avec le menu {icon}. Depuis celui-ci, vous pouvez également le modifier, le supprimer, ou voir les participants.",
+  "GIVEAWAY_DELETED": "Concours supprimé.",
+  "GIVEAWAY_ENDED": "Concours terminé",
+  "LEAVE_GIVEAWAY": "Quitter le concours",
+  "LEAVE_GIVEAWAY_SUCCESS": "Vous avez quitté le concours.",
+  "GIVEAWAY_ALREADY_ENTERED": "Vous participez déjà à ce concours.",
+  "CONGRATULATIONS": "Félicitations !",
+  "GIVEAWAY_RESULTS_DESCRIPTION": "{users} a/ont gagné {prize} !",
   "8ball": {
     "name": "boule_de_cristal",
     "description": "Posez une question à la boule de cristal.",
@@ -407,6 +433,7 @@
   "SUBJECT": "Sujet",
   "WHEN_TO_SEND": "Quand l'envoyer",
   "DELETE_CONFIRMATION_TITLE": "Voulez-vous le supprimer pour toujours ?!",
+  "DELETE_CONFIRMATION_DESCRIPTION": "Cette action est irréversible !",
   "REMINDER_MESSAGE_TITLE": "[Message de {user}]",
   "reminder_list": {
     "description": "Obtenez une liste de vos rappels."
@@ -430,10 +457,16 @@
   "PRIVACY_SILENT_LEAVES_DESCRIPTION": "Lorsque cette option est active, CRBT n'annoncera pas lorsque vous quittez un serveur.",
   "PRIVACY_TELEMETRY_DESCRIPTION": "CRBT collecte l'utilisation des commandes comme indiqué dans notre politique de confidentialité. Le désactiver cesse d'envoyer des données.",
   "YOUR_CRBT_DATA": "Vos données CRBT",
-  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT utilise votre saisie pour fournir ses fonctionnalités. Vous pouvez télécharger ou supprimer vos données, mais la suppression effacera toutes vos données, y compris vos Rappels et l'Économie.",
-  "PRIVACY_SETTINGS_TITLE": "Réglages de confidentialité",
+  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT utilise vos données pour vous fournir des fonctionnalités. Vous pouvez télécharger ou supprimer toutes vos données, y compris les Rappels, vos paramètres, l'Économie et plus encore.",
+  "PRIVACY_DOWNLOAD_MY_DATA": "Télécharger mes données",
+  "PRIVACY_DELETE_MY_DATA": "Supprimer mes données",
+  "PRIVACY_DESCRIPTION": "CRBT est transparent sur la façon dont il collecte et utilise vos données.",
+  "PRIVACY_POLICY_LINK": "Lire notre politique de confidentialité.",
   "settings": {
     "description": "Configurer les paramètres CRBT du serveur."
+  },
+  "user settings": {
+    "description": "Personnalisez vos paramètres CRBT."
   },
   "ATTENTION_REQUIRED": "Attention requise",
   "OVERVIEW": "Vue d'ensemble",
@@ -464,12 +497,23 @@
   "CHANNEL": "Salon",
   "EDIT_SOMETHING": "Modifier {feature}",
   "SETTINGS_COLOR_SET_TO": "Couleur du thème",
-  "SETTINGS_COLOR_DESCRIPTION": "Personnalisez l'apparence des Sondages, des Concours et plus encore. Choisissez une couleur manuellement, ou laissez CRBT extraire la couleur principale de l'icône de votre serveur.",
+  "SETTINGS_COLOR_SHORT_DESCRIPTION": "Personnalisez la couleur d'accentuation du serveur pour les fonctionnalités de CRBT.",
+  "SETTINGS_COLOR_DESCRIPTION": "Personnalisez l'apparence des menus relatifs à votre serveur. Choisissez une couleur manuellement, ou laissez CRBT extraire la couleur principale de l'icône de votre serveur.",
+  "SETTINGS_JOIN_LEAVE_SHORT_DESCRIPTION": "Accueillez les nouveaux membres et annoncez les membres qui quittent.",
   "SETTINGS_JOIN_LEAVE_DESCRIPTION": "Envoyez automatiquement des messages pour accueillir les nouveaux membres et annoncez quand les membres quittent votre serveur.",
-  "SETTINGS_MODLOGS_DESCRIPTION": "Recevez des notifications en temps réel dans un salon pour toutes les actions de modération effectuées avec CRBT.",
-  "SETTINGS_MODREPORTS_DESCRIPTION": "Les membres peuvent signaler un message ou un utilisateur à un salon en utilisant les Signalements en faisant un clic droit/appuyant longuement dessus.",
+  "SETTINGS_MODERATION_SHORT_DESCRIPTION": "Notifications, Signalements et Historique",
+  "SETTINGS_MODLOGS_SHORT_DESCRIPTION": "Recevoir des notifications pour les actions de modération",
+  "SETTINGS_MODLOGS_DESCRIPTION": "Lorsque l'option est activée, CRBT enverra un message dans le salon de votre choix lorsqu'un modérateur prend des mesures contre un membre en utilisant CRBT.",
+  "SETTINGS_MODREPORTS_SHORT_DESCRIPTION": "Autoriser les membres à signaler les messages et les utilisateurs du serveur",
+  "SETTINGS_MODREPORTS_DESCRIPTION": "Lorsque l'option est activée, les membres pourront signaler des messages et des utilisateurs par un clic droit ou un appui long sur eux. Les messages signalés sont envoyés dans le salon de votre choix, et ajoutés à l'Historique de Modération.",
+  "SETTINGS_PRIVACY_SHORT_DESCRIPTION": "Gérer, télécharger ou supprimer vos données.",
+  "SETTINGS_PRIVACY_DESCRIPTION": "CRBT enregistrer des données fonctionnelles et certaines données de Discord pour vous offrir ses fonctionnalités. Vous pouvez télécharger ou supprimer toutes les données du serveur, y compris les Concours, l'Historique de Modération, l'Économie et tout le reste.",
+  "SETTINGS_ECONOMY_SHORT_DESCRIPTION": "Gérer l'économie du serveur.",
+  "SETTINGS_ECONOMY_DESCRIPTION": "L'Économie de Serveur est un moyen fun de récompenser vos membres pour leur activité. Vous pouvez personnaliser la boutique du serveur. PAS FINI !!",
   "SETTINGS_ERROR_CHANNEL_NOT_FOUND": "Salon introuvable. Modifiez-le pour que CRBT puisse continuer à y envoyer des messages.",
   "SETTINGS_ERROR_CONFIG_NOT_DONE": "Cette fonctionnalité n'est pas entièrement configurée. Utilisez les boutons ci-dessous pour terminer la configuration.",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_CHANNEL": "Aucun salon défini. Modifiez-le pour activer cette fonctionnalité.",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_MESSAGE": "Aucun message défini. Modifiez-le pour activer cette fonctionnalité.",
   "search": {
     "name": "rechercher",
     "description": "Rechercher sur le web.",
@@ -514,6 +558,7 @@
   "DELETE_MESSAGE": "Supprimer le message",
   "MODREPORTS_SUCCESS_TITLE": "Votre signalement a été envoyé aux modérateurs de {server}.",
   "MODREPORTS_SUCCESS_DESCRIPTION": "Il a été ajouté à l'Historique de Modération de {user}. Les personnes ayant accès au salon des Signalements peuvent le passer en revue et prendre des mesures.",
+  "MODREPORTS_SELECT_MENU": "Choisissez une action à prendre.",
   "ROLE_INFO_TITLE": "{role} - Infos sur le rôle",
   "POSITION": "Position",
   "HUMANS": "Humain(s)",
@@ -573,6 +618,7 @@
       }
     }
   },
+  "MESSAGE_FROM_USER": "Message de l'utilisateur",
   "EMOJI_INFO_ERROR_UNKNOWN_TITLE": "Impossible de trouver cet émoji.",
   "EMOJI_INFO_ERROR_UNKNOWN_DESCRIPTION": "Utilisez plutôt un émoji {standardEmoji} par défaut ou {customEmoji} personnalisé.",
   "EMOJI_INFO_CLONE_SUCCESS": "{emoji} a été ajouté au serveur.",
@@ -584,6 +630,8 @@
   "SERVER_INVITE": "Invitation de serveur",
   "GROUP_DM_INVITE": "Invitation à un groupe de MP",
   "UNNAMED": "Sans nom",
+  "MORE_INFO": "Plus d'infos",
+  "LANDING_CHANNEL": "Salon de destination",
   "INVITE_INFO_ERROR_INVALID_TITLE": "Lien d'invitation invalide.",
   "INVITE_INFO_ERROR_INVALID_DESCRIPTION": "Assurez-vous qu'elle n'a pas expiré et qu'elle est publique.",
   "invite_info": {
@@ -615,5 +663,59 @@
   "SEARCH_ERROR_NO_RESULTS_TITLE": "Aucun résultat trouvé.",
   "SEARCH_ERROR_NO_RESULTS_DESCRIPTION": "Regardez vos erreurs d'orthographe ou pour un sujet plus large.\nLes résultats NSFW sont cachés en dehors des salons soumis à une limite d'âge.",
   "DURATION": "Durée",
-  "VIEWS": "Vues"
+  "VIEWS": "Vues",
+  "lock": {
+    "description": "Rend un salon en lecture seule pour tout le monde.",
+    "options": {
+      "channel": {
+        "description": "Le salon à verrouiller."
+      }
+    }
+  },
+  "LOCK_SUCCESS_TITLE": "{channel} a été verrouillé.",
+  "LOCK_SUCCESS_DESCRIPTION_VOICE": "Les utilisateurs ne pourront plus rejoindre ce salon.",
+  "LOCK_SUCCESS_DESCRIPTION_TEXT": "Les utilisateurs ne pourront plus envoyer de messages dans ce salon et ses fils, ou créer de nouveaux fils.",
+  "LOCK_SUCCESS_DESCRIPTION_FORUM": "Les utilisateurs ne pourront plus envoyer de messages dans des posts, ou de créer de nouveaux posts.",
+  "LOCK_SUCCESS_DESCRIPTION_COMMAND": "Utilisez {command} pour déverrouiller ce salon.",
+  "LOCK_SUCCESS_DESCRIPTION_WARNING": "Les administrateurs, et les rôles écrasant les permissions de ce salon, seront immunisés.",
+  "LOCK_ERROR_ALREADY_LOCKED_TITLE": "Ce salon est déjà verrouillé.",
+  "LOCK_ERROR_ALREADY_LOCKED_DESCRIPTION": "Les permissions 'Envoyer des messages', 'Se connecter' ou 'Créer des fils/posts' est/sont déjà refusée(s) pour @everyone.",
+  "unlock": {
+    "description": "Déverouille les permissions de voir/se connecter à un salon pour tout le monde.",
+    "options": {
+      "channel": {
+        "description": "Le salon à déverrouiller."
+      }
+    }
+  },
+  "UNLOCK_SUCCESS_TITLE": "{channel} a été déverrouillé.",
+  "UNLOCK_SUCCESS_DESCRIPTION": "Toutes les permissions d'écriture et de connexion ont été restaurées.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_TITLE": "Ce salon est déjà déverrouillé.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_DESCRIPTION": "Les permissions 'Envoyer des messages', 'Se connecter' ou 'Créer des fils/posts' est/sont déjà autorisée(s) pour @everyone.",
+  "MOD_NOTIFICATION_LOCK_TITLE": "{channel} a été verrouillé",
+  "MOD_NOTIFICATION_UNLOCK_TITLE": "{channel} a été déverrouillé",
+  "MOD_NOTIFICATION_CLEAR_TITLE": "{messages} messages ont été supprimés dans {channel}",
+  "BULK_DELETE": "Supprimer en masse",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_TITLE": "Voulez-vous vraiment supprimer toutes les données de CRBT pour {guildName} ?",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_DESCRIPTION": "En confirmant, vous supprimerez définitivement :",
+  "DELETE_DATA": "Supprimer des données",
+  "DOWNLOAD_ALL_DATA": "Télécharger toutes les données",
+  "MODERATION_HISTORY": "L'Historique de Modération",
+  "X_GIVEAWAYS": "{number} concours",
+  "ENTIRETY_OF_MODERATION_HISTORY": "L'entièreté de l'Historique de Modération du serveur",
+  "X_MODERATION_HISTORY_ENTRIES": "{number} entrées",
+  "X_SETTINGS": "{number} paramètres (thème, modération, Économie...)",
+  "X_ECONOMY_ITEMS_CATEGORIES": "{categories} catégories de la Boutique, contenant {items} articles",
+  "X_ACHIEVEMENTS": "{categories} catégories de Succès, contenant {achievements} succès",
+  "DELETE_DATA_SUCCESS": "Les données sélectionnées ont été supprimées ou réinitialisées avec succès.",
+  "DELETE_DATA_ERROR": "Une erreur s’est produite lors de la suppression des données.",
+  "GUILD_NO_DATA": "Aucune donnée sur ce serveur n'a été trouvée.",
+  "ITEM_TYPE_ROLE": "Rôle(s)",
+  "ITEM_TYPE_WEAPON": "Arme",
+  "ITEM_TYPE_INCOME_MULTIPLIER": "Multiplicateur de revenus",
+  "ITEM_TYPE_WEBHOOK_ACTION": "Action de Webhook",
+  "ITEM_TYPE_CRBTSCRIPT": "Action CRBTscript",
+  "ITEM_TYPE_COSMETIC": "Cosmétiqu",
+  "ITEM_TYPE_OTHER": "Autre",
+  "LOADING_TITLE": "Chargement en cours... (Cela peut prendre jusqu'à une minute)"
 }

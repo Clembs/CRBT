@@ -11,6 +11,7 @@
   "DONATE": "Adományozás",
   "PERMISSION_ADMINISTRATOR": "Administrator",
   "ERROR_MISSING_PERMISSIONS": "You don't have the required permissions: {PERMISSIONS}.",
+  "ERROR_BOT_MISSING_PERMISSIONS": "I don't have the required permissions: {permissions}.",
   "ERROR_INVALID_URL": "Invalid URL.",
   "ERROR_INVALID_COLOR": "Invalid color. Use a preset or a valid HEX code.",
   "ERROR_INVALID_DURATION": "Invalid duration format, or it exceeds {relativeTime} in the future.",
@@ -32,6 +33,8 @@
   "IMPORT": "Importálás",
   "YES": "Igen",
   "NO": "Nem",
+  "VIEW_DETAILS": "View Details",
+  "LONG_ACTION_FOOTNOTE": "This may take a while.",
   "ERROR_INVALID_CHANNEL": "Meg kell adnod egy érvényes {types} csatornát.",
   "ERROR_ONLY_OG_USER_MAY_USE_BTN": "Only this command's user can use this component.",
   "TEXT_CHANNEL": "Text",
@@ -52,6 +55,7 @@
   "STICKERS": "Stickers",
   "SERVERS": "Szerver(ek)",
   "NONE": "Semmi",
+  "UNKNOWN": "Unknown",
   "CHANNELS": "Csatornák",
   "EMOJIS": "Emojis",
   "ADDED": "Added",
@@ -119,7 +123,8 @@
       "PAST": "Reminders cannot be set in the past.",
       "INVALID_FORMAT": "The time you entered is in an invalid format.",
       "TOO_LONG": "Reminders cannot be set for more than 2 years in the future.",
-      "REMINDERS_MAX_LIMIT": "Maximum limit of 10 reminders reached."
+      "REMINDERS_MAX_LIMIT": "Maximum limit of 10 reminders reached.",
+      "EVENT_NOT_FOUND": "The Discord event provided was not found."
     },
     "strings": {
       "SUCCESS_TITLE": "Reminder set! Use {command} to manage your reminders.",
@@ -157,29 +162,16 @@
           "description": "When does it end?"
         },
         "choice": {
-          "description": "One of the poll's choices."
-        },
-        "image": {
-          "description": "Append an image."
+          "description": "One of the poll's answers."
         }
       }
     },
     "errors": {
-      "CHOICE_EMPTY": "A choice cannot be empty (excluding emoji)."
+      "CHOICE_EMPTY": "An answer cannot be empty (excluding emoji)."
     },
     "strings": {
-      "POLL_DESCRIPTION": "Ends {TIME}.\nThe creator may view vote data with the {ICON} button.",
-      "POLL_FOOTER_CREATOR": "{user} created a poll",
-      "SUCCESS_TITLE": "Poll created!",
-      "SUCCESS_DESCRIPTION": "View votes, edit, delete or end your poll early with the {ICON} button.",
       "DATA_AND_OPTIONS": "Data and Options",
-      "POLL_DATA_NOVOTES": "No votes",
-      "POLL_DATA_FOOTER": "Refresh this data by using the button again.",
-      "SUCCESS_POLL_DELETED": "Poll deleted.",
-      "SUCCESS_POLL_ENDED": "Poll ended.",
-      "POLL_DESCRIPTION_ENDED": "The poll has ended. You can no longer vote on it.",
-      "POLL_RESULTS_TITLE": "The results are in!",
-      "POLL_RESULTS_DESCRIPTION": "{options} has/have won with {votes} vote(s)/{total}!"
+      "POLL_DATA_FOOTER": "Refresh this data by using the button again."
     }
   },
   "banner": {
@@ -242,6 +234,10 @@
   "USER_AVATAR": "Felhasználói Avatar",
   "USER_BANNER": "Felhasználói Banner",
   "SERVER_INFO": "Szerver információ",
+  "IDENTITY": "Identity",
+  "IDENTITY_UNIQUE_USERNAME": "Unique username: {username}",
+  "IDENTITY_GLOBAL_NAME": "Global display name: {globalName}",
+  "IDENTITY_SERVER_NICKNAME": "Server nickname: {nickname}",
   "ICON": "Ikon",
   "BANNER": "Banner",
   "WARN": "Figyelmeztetés",
@@ -252,6 +248,8 @@
   "TEMPBAN": "Ideiglenes eltíltás",
   "CLEAR": "Clear",
   "REPORT": "Jelentés",
+  "LOCK": "Lock",
+  "UNLOCK": "Unlock",
   "REASON": "Indok",
   "MOD_VERB_BAN": "Kitíltva",
   "MOD_VERB_TEMPBAN": "Temporarily banned",
@@ -260,11 +258,26 @@
   "MOD_VERB_TIMEOUT": "Timed out",
   "MOD_VERB_WARN": "Figyelmeztetett",
   "MOD_VERB_REPORT": "Reported",
+  "MOD_VERB_LOCK": "Locked",
+  "MOD_VERB_UNLOCK": "Unlocked",
+  "MOD_VERB_UNBAN": "Unbanned",
   "DESCRIPTION": "Description",
   "EXPIRES_AT": "Expires at",
+  "modlogs_all": {
+    "description": "View the server's Moderation History."
+  },
+  "modlogs_user": {
+    "description": "View a user's Moderation History."
+  },
+  "ENTRY_NO": "Entry #{number}",
+  "ENTRY": "Entry",
+  "MODERATION_LOGS_ENTRIES_TOTAL": "{entries} entries total.",
   "MODERATION_LOGS_VIEW_EMPTY": "*No Moderation History found.*",
   "MODERATION_LOGS_VIEW_SELECT_MENU_PLACEHOLDER": "View, edit or delete an entry",
   "MODERATION_LOGS_VIEW_TITLE": "Moderation History in {SERVER}",
+  "MODERATION_LOGS_BULK_DELETE_DESCRIPTION": "Choose entries to delete from the Moderation History.",
+  "MODERATION_LOGS_BULK_DELETE_TITLE": "Deleting entries...",
+  "MODERATION_LOGS_BULK_DELETE_SUCCESS": "{number} entries were successfully deleted.",
   "MODERATOR": "Moderator",
   "REPORTED_BY": "Reported by",
   "JOIN_MESSAGE": "Welcome Message",
@@ -310,6 +323,7 @@
   "HELP_AD_TITLE": "Tetszik a CRBT?",
   "HELP_AD_DESCRIPTION": "Add it to your server!",
   "GIVEAWAY": "Nyereményjáték",
+  "GIVEAWAYS": "Giveaways",
   "giveaway": {
     "description": "Nyereményjáték létrehozás",
     "options": {
@@ -321,8 +335,20 @@
       }
     }
   },
+  "PARTICIPANTS": "Participants",
   "WINNERS": "Nyertes(ek)",
   "PRIZE": "Prize",
+  "HOST": "Host",
+  "ENTER_GIVEAWAY": "Enter Giveaway",
+  "GIVEAWAY_SUCCESS_TITLE": "Giveaway started!",
+  "GIVEAWAY_SUCCESS_DESCRIPTION": "It will end {relativeTime}, but you can prematurely end it using the {icon} menu. From there, you can also cancel the giveaway or view the participants.",
+  "GIVEAWAY_DELETED": "Giveaway deleted.",
+  "GIVEAWAY_ENDED": "Giveaway ended",
+  "LEAVE_GIVEAWAY": "Leave Giveaway",
+  "LEAVE_GIVEAWAY_SUCCESS": "You left the giveaway.",
+  "GIVEAWAY_ALREADY_ENTERED": "You've already entered this giveaway.",
+  "CONGRATULATIONS": "Congratulations!",
+  "GIVEAWAY_RESULTS_DESCRIPTION": "{users} have won {prize}!",
   "8ball": {
     "name": "8ball",
     "description": "Tegyél fel kérdést a 8-Ball-nak.",
@@ -407,6 +433,7 @@
   "SUBJECT": "Subject",
   "WHEN_TO_SEND": "When to send",
   "DELETE_CONFIRMATION_TITLE": "Do you want to delete it, forever?!",
+  "DELETE_CONFIRMATION_DESCRIPTION": "This action cannot be undone!",
   "REMINDER_MESSAGE_TITLE": "[Message from {user}]",
   "reminder_list": {
     "description": "Get a list of your reminders."
@@ -430,10 +457,16 @@
   "PRIVACY_SILENT_LEAVES_DESCRIPTION": "When on, CRBT won't announce when you leave a server.",
   "PRIVACY_TELEMETRY_DESCRIPTION": "CRBT logs command usage according to our Privacy Policy. Disabling it stops sending logs.",
   "YOUR_CRBT_DATA": "Your CRBT data",
-  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT uses your input to provide features. You can download or delete your data, but deleting will erase all your data, including Reminders and Economy.",
-  "PRIVACY_SETTINGS_TITLE": "Privacy Settings",
+  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT uses your input to provide features. You can download or delete all of your data, including Reminders, Settings, Economy and more.",
+  "PRIVACY_DOWNLOAD_MY_DATA": "Download my data",
+  "PRIVACY_DELETE_MY_DATA": "Delete my data",
+  "PRIVACY_DESCRIPTION": "CRBT is transparent about the way it collects and uses your data.",
+  "PRIVACY_POLICY_LINK": "Read our Privacy Policy.",
   "settings": {
     "description": "Configure CRBT's Server Settings."
+  },
+  "user settings": {
+    "description": "Customize your CRBT settings."
   },
   "ATTENTION_REQUIRED": "Attention Required",
   "OVERVIEW": "Overview",
@@ -464,12 +497,23 @@
   "CHANNEL": "Csatorna",
   "EDIT_SOMETHING": "Edit {feature}",
   "SETTINGS_COLOR_SET_TO": "Color theme",
-  "SETTINGS_COLOR_DESCRIPTION": "Customize the look of Polls, Giveaways and more. Pick a color manually, or let CRBT extract the main color from your server's icon.",
+  "SETTINGS_COLOR_SHORT_DESCRIPTION": "Customize the server's accent color for CRBT features.",
+  "SETTINGS_COLOR_DESCRIPTION": "Customize the look of menus related to your server. Pick a color manually, or let CRBT extract the main color from your server's icon.",
+  "SETTINGS_JOIN_LEAVE_SHORT_DESCRIPTION": "Welcome new members and announce departing members.",
   "SETTINGS_JOIN_LEAVE_DESCRIPTION": "Automatically send messages to welcome new members, and announce when members leave your server.",
-  "SETTINGS_MODLOGS_DESCRIPTION": "Get realtime notifications in a chosen channel for all moderator actions taken using CRBT.",
-  "SETTINGS_MODREPORTS_DESCRIPTION": "Members can report a message or user to a chosen channel using Moderation Reports by right-clicking or long-pressing them.",
+  "SETTINGS_MODERATION_SHORT_DESCRIPTION": "Notifications, Reports and History",
+  "SETTINGS_MODLOGS_SHORT_DESCRIPTION": "Get notifications for moderation actions",
+  "SETTINGS_MODLOGS_DESCRIPTION": "When enabled, CRBT will send a message to a channel of your choice when a moderator takes action against a member using CRBT.",
+  "SETTINGS_MODREPORTS_SHORT_DESCRIPTION": "Allow members to report server messages and users",
+  "SETTINGS_MODREPORTS_DESCRIPTION": "When enabled, members can report messages and users by right-clicking or long-pressing them. Reported messages are sent to a channel of your choice and added to the Moderation History.",
+  "SETTINGS_PRIVACY_SHORT_DESCRIPTION": "Manage, download or delete your data.",
+  "SETTINGS_PRIVACY_DESCRIPTION": "CRBT stores its own functional data and some Discord data to provide its features. You can download or delete all of the server's data, including running Giveaways, Moderation History, Economy and everything else.",
+  "SETTINGS_ECONOMY_SHORT_DESCRIPTION": "Manage the server's economy.",
+  "SETTINGS_ECONOMY_DESCRIPTION": "CRBT's economy is a fun way to reward members for being active. You can customize the server's shop. WIP!!",
   "SETTINGS_ERROR_CHANNEL_NOT_FOUND": "Channel not found. Edit it for CRBT to continue sending messages.",
   "SETTINGS_ERROR_CONFIG_NOT_DONE": "Feature not fully configured. Use the buttons below to finish setup.",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_CHANNEL": "No channel set. Edit it to enable this feature.",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_MESSAGE": "No message set. Edit it to enable this feature.",
   "search": {
     "name": "search",
     "description": "Search anything on the web.",
@@ -514,6 +558,7 @@
   "DELETE_MESSAGE": "Delete Message",
   "MODREPORTS_SUCCESS_TITLE": "Your report was sent to {server}'s moderators.",
   "MODREPORTS_SUCCESS_DESCRIPTION": "It was added to {user}'s Moderation History. Review and action can be taken by those with access to the Moderation Reports channel.",
+  "MODREPORTS_SELECT_MENU": "Choose an action to take.",
   "ROLE_INFO_TITLE": "{role} - Role info",
   "POSITION": "Position",
   "HUMANS": "Ember(ek)",
@@ -573,6 +618,7 @@
       }
     }
   },
+  "MESSAGE_FROM_USER": "Message from user",
   "EMOJI_INFO_ERROR_UNKNOWN_TITLE": "Can't find this emoji.",
   "EMOJI_INFO_ERROR_UNKNOWN_DESCRIPTION": "Use a default {standardEmoji} or custom {customEmoji} emoji instead.",
   "EMOJI_INFO_CLONE_SUCCESS": "Added {emoji} to the server.",
@@ -584,6 +630,8 @@
   "SERVER_INVITE": "Szerver meghívás",
   "GROUP_DM_INVITE": "Group DM invite",
   "UNNAMED": "Unnamed",
+  "MORE_INFO": "More info",
+  "LANDING_CHANNEL": "Landing channel",
   "INVITE_INFO_ERROR_INVALID_TITLE": "Invalid Discord invite.",
   "INVITE_INFO_ERROR_INVALID_DESCRIPTION": "Make sure it hasn't expired and that it is public.",
   "invite_info": {
@@ -615,5 +663,59 @@
   "SEARCH_ERROR_NO_RESULTS_TITLE": "No results found.",
   "SEARCH_ERROR_NO_RESULTS_DESCRIPTION": "Check for spelling errors or for a broader topic.\nNSFW results are hidden outside of age-restricted channels.",
   "DURATION": "Duration",
-  "VIEWS": "Views"
+  "VIEWS": "Views",
+  "lock": {
+    "description": "Makes a channel read-only for @everyone.",
+    "options": {
+      "channel": {
+        "description": "The channel to lock."
+      }
+    }
+  },
+  "LOCK_SUCCESS_TITLE": "Locked {channel}.",
+  "LOCK_SUCCESS_DESCRIPTION_VOICE": "Users will not be able to connect to this channel.",
+  "LOCK_SUCCESS_DESCRIPTION_TEXT": "Users will not be able to send messages in this channel and its threads, or create new threads.",
+  "LOCK_SUCCESS_DESCRIPTION_FORUM": "Users will not be able to send messages in posts, or create new posts.",
+  "LOCK_SUCCESS_DESCRIPTION_COMMAND": "Use {command} to unlock this channel.",
+  "LOCK_SUCCESS_DESCRIPTION_WARNING": "Administrators, and roles overwriting the channel's permissions, will be immune.",
+  "LOCK_ERROR_ALREADY_LOCKED_TITLE": "This channel is already locked.",
+  "LOCK_ERROR_ALREADY_LOCKED_DESCRIPTION": "The 'Send Messages', 'Connect' or 'Create Threads/Posts' permission(s) is/are already denied for @everyone.",
+  "unlock": {
+    "description": "Unlocks a channel's view & connect permissions for @everyone.",
+    "options": {
+      "channel": {
+        "description": "The channel to unlock."
+      }
+    }
+  },
+  "UNLOCK_SUCCESS_TITLE": "Unlocked {channel}.",
+  "UNLOCK_SUCCESS_DESCRIPTION": "All write & connect permissions were restored.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_TITLE": "This channel is already unlocked.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_DESCRIPTION": "The 'Send Messages', 'Connect' or 'Create Threads/Posts' permission(s) is/are already allowed for @everyone.",
+  "MOD_NOTIFICATION_LOCK_TITLE": "{channel} was locked",
+  "MOD_NOTIFICATION_UNLOCK_TITLE": "{channel} was unlocked",
+  "MOD_NOTIFICATION_CLEAR_TITLE": "{messages} messages were cleared in {channel}",
+  "BULK_DELETE": "Bulk Delete",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_TITLE": "Do you really want to delete all of the CRBT data for {guildName}?",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_DESCRIPTION": "By confirming, you will forever delete:",
+  "DELETE_DATA": "Delete data",
+  "DOWNLOAD_ALL_DATA": "Download all data",
+  "MODERATION_HISTORY": "Moderation History",
+  "X_GIVEAWAYS": "{number} giveaways",
+  "ENTIRETY_OF_MODERATION_HISTORY": "The entirety of the server's Moderation History",
+  "X_MODERATION_HISTORY_ENTRIES": "{number} entries",
+  "X_SETTINGS": "{number} settings (Theming, Moderation, Economy...)",
+  "X_ECONOMY_ITEMS_CATEGORIES": "{categories} Shop categories containing {items} items",
+  "X_ACHIEVEMENTS": "{categories} Achievement categories containing {achievements} achievements",
+  "DELETE_DATA_SUCCESS": "The selected data was successfully deleted or reset.",
+  "DELETE_DATA_ERROR": "An error occurred while deleting the data.",
+  "GUILD_NO_DATA": "No data about the server was found.",
+  "ITEM_TYPE_ROLE": "Rang",
+  "ITEM_TYPE_WEAPON": "Weapon",
+  "ITEM_TYPE_INCOME_MULTIPLIER": "Income Multiplier",
+  "ITEM_TYPE_WEBHOOK_ACTION": "Webhook Action",
+  "ITEM_TYPE_CRBTSCRIPT": "CRBTscript Action",
+  "ITEM_TYPE_COSMETIC": "Cosmetic",
+  "ITEM_TYPE_OTHER": "Other",
+  "LOADING_TITLE": "Loading (this may take up to a minute)..."
 }

@@ -11,6 +11,7 @@
   "DONATE": "दान करे",
   "PERMISSION_ADMINISTRATOR": "एडमिनिस्ट्रेटर",
   "ERROR_MISSING_PERMISSIONS": "आपके पास यह दिया हुआ परमिशन नहीं है: {PERMISSIONS}",
+  "ERROR_BOT_MISSING_PERMISSIONS": "I don't have the required permissions: {permissions}.",
   "ERROR_INVALID_URL": "गलत URL",
   "ERROR_INVALID_COLOR": "रंग अमान्य है | Preset या मान्य HEX कोड इस्तेमाल कीजिए |",
   "ERROR_INVALID_DURATION": "Invalid duration format, or it exceeds {relativeTime} in the future.",
@@ -32,6 +33,8 @@
   "IMPORT": "इम्पोर्ट",
   "YES": "हाँ",
   "NO": "नहीं",
+  "VIEW_DETAILS": "View Details",
+  "LONG_ACTION_FOOTNOTE": "This may take a while.",
   "ERROR_INVALID_CHANNEL": "आपको सही {} चैनल प्रदान करने की आवश्यकता है |",
   "ERROR_ONLY_OG_USER_MAY_USE_BTN": "Only this command's user can use this component.",
   "TEXT_CHANNEL": "टेक्स्ट",
@@ -52,6 +55,7 @@
   "STICKERS": "स्टिकर्स",
   "SERVERS": "सर्वर्स",
   "NONE": "None",
+  "UNKNOWN": "Unknown",
   "CHANNELS": "चैनल्स",
   "EMOJIS": "इमोजी",
   "ADDED": "एडेड",
@@ -119,7 +123,8 @@
       "PAST": "पिछले समह के लिए रिमाइंडर सेट नहीं हो सकता |",
       "INVALID_FORMAT": "आपने जो टाइम इंटर किया वो सही फॉर्मेट में नहीं है |",
       "TOO_LONG": "रिमाइंडर्स 2 साल से ज्यादा फ्यूचर में सेट नहीं हो सकता |",
-      "REMINDERS_MAX_LIMIT": "10 रिमाइंडर्स की मैक्सिमम लिमिट पूरी हो गयी |"
+      "REMINDERS_MAX_LIMIT": "10 रिमाइंडर्स की मैक्सिमम लिमिट पूरी हो गयी |",
+      "EVENT_NOT_FOUND": "The Discord event provided was not found."
     },
     "strings": {
       "SUCCESS_TITLE": "रिमाइंडर सेट हो गया! रिमाइंडर्स को मैनेज करने के लिए इस {command} को इस्तेमाल करे |",
@@ -157,29 +162,16 @@
           "description": "यह कैसे समाप्त होता है?"
         },
         "choice": {
-          "description": "पोल की एक choice |"
-        },
-        "image": {
-          "description": "उसके ऊपर इमेज डाले |"
+          "description": "One of the poll's answers."
         }
       }
     },
     "errors": {
-      "CHOICE_EMPTY": "विकल्प खाली नहीं हो सकता (इमोजी को छोड़कर)"
+      "CHOICE_EMPTY": "An answer cannot be empty (excluding emoji)."
     },
     "strings": {
-      "POLL_DESCRIPTION": "Ends {TIME}.\nThe creator may view vote data with the {ICON} button.",
-      "POLL_FOOTER_CREATOR": "{user} ने पोल बनाया |",
-      "SUCCESS_TITLE": "पोल बन गया |",
-      "SUCCESS_DESCRIPTION": "View votes, edit, delete or end your poll early with the {ICON} button.",
       "DATA_AND_OPTIONS": "Data और Options",
-      "POLL_DATA_NOVOTES": "No votes",
-      "POLL_DATA_FOOTER": "इस बटन को दुबारा इस्तेमाल करके इस डाटा को रिफ्रेश करे |",
-      "SUCCESS_POLL_DELETED": "पोल हट गया |",
-      "SUCCESS_POLL_ENDED": "पोल खत्म |",
-      "POLL_DESCRIPTION_ENDED": "पोल समाप्त हो गया है| आप वोट नहीं डाल सकते|",
-      "POLL_RESULTS_TITLE": "रिजल्ट आ रहे हैं!",
-      "POLL_RESULTS_DESCRIPTION": "{options} has/have won with {votes} vote(s)/{total}!"
+      "POLL_DATA_FOOTER": "इस बटन को दुबारा इस्तेमाल करके इस डाटा को रिफ्रेश करे |"
     }
   },
   "banner": {
@@ -242,6 +234,10 @@
   "USER_AVATAR": "User Avatar ",
   "USER_BANNER": "User banner",
   "SERVER_INFO": "Server की जानकारी ",
+  "IDENTITY": "Identity",
+  "IDENTITY_UNIQUE_USERNAME": "Unique username: {username}",
+  "IDENTITY_GLOBAL_NAME": "Global display name: {globalName}",
+  "IDENTITY_SERVER_NICKNAME": "Server nickname: {nickname}",
   "ICON": "Icon",
   "BANNER": "Banner",
   "WARN": "वार्न ",
@@ -252,6 +248,8 @@
   "TEMPBAN": "टेम्पररी बैन",
   "CLEAR": "साफ़ ",
   "REPORT": "रिपोर्ट",
+  "LOCK": "Lock",
+  "UNLOCK": "Unlock",
   "REASON": "कारण",
   "MOD_VERB_BAN": "बैन हो गए",
   "MOD_VERB_TEMPBAN": "टेम्पररी बैन हो गए",
@@ -260,11 +258,26 @@
   "MOD_VERB_TIMEOUT": "टाइम्ड आउट",
   "MOD_VERB_WARN": "वार्न किया",
   "MOD_VERB_REPORT": "रिपोर्ट किया",
+  "MOD_VERB_LOCK": "Locked",
+  "MOD_VERB_UNLOCK": "Unlocked",
+  "MOD_VERB_UNBAN": "Unbanned",
   "DESCRIPTION": "डिस्क्रिप्शन",
   "EXPIRES_AT": "Expires at",
+  "modlogs_all": {
+    "description": "View the server's Moderation History."
+  },
+  "modlogs_user": {
+    "description": "View a user's Moderation History."
+  },
+  "ENTRY_NO": "Entry #{number}",
+  "ENTRY": "Entry",
+  "MODERATION_LOGS_ENTRIES_TOTAL": "{entries} entries total.",
   "MODERATION_LOGS_VIEW_EMPTY": "*मॉडरेशन की हिस्ट्री नहीं मिली |*",
   "MODERATION_LOGS_VIEW_SELECT_MENU_PLACEHOLDER": "व्यू, एडिट या एंट्री को डिलीट करे",
   "MODERATION_LOGS_VIEW_TITLE": "{SERVER} की मॉडरेशन हिस्ट्री",
+  "MODERATION_LOGS_BULK_DELETE_DESCRIPTION": "Choose entries to delete from the Moderation History.",
+  "MODERATION_LOGS_BULK_DELETE_TITLE": "Deleting entries...",
+  "MODERATION_LOGS_BULK_DELETE_SUCCESS": "{number} entries were successfully deleted.",
   "MODERATOR": "मॉडरेटर",
   "REPORTED_BY": "ने रिपोर्ट किया",
   "JOIN_MESSAGE": "स्वागत संदेश",
@@ -310,6 +323,7 @@
   "HELP_AD_TITLE": "CRBT पसंद है ?",
   "HELP_AD_DESCRIPTION": "इसे अपने सर्वर ऐड करे |",
   "GIVEAWAY": "गिवअवे ",
+  "GIVEAWAYS": "Giveaways",
   "giveaway": {
     "description": "एक गिवअवे बनाए |",
     "options": {
@@ -321,8 +335,20 @@
       }
     }
   },
+  "PARTICIPANTS": "Participants",
   "WINNERS": "विजय",
   "PRIZE": "इनाम ",
+  "HOST": "Host",
+  "ENTER_GIVEAWAY": "Enter Giveaway",
+  "GIVEAWAY_SUCCESS_TITLE": "Giveaway started!",
+  "GIVEAWAY_SUCCESS_DESCRIPTION": "It will end {relativeTime}, but you can prematurely end it using the {icon} menu. From there, you can also cancel the giveaway or view the participants.",
+  "GIVEAWAY_DELETED": "Giveaway deleted.",
+  "GIVEAWAY_ENDED": "Giveaway ended",
+  "LEAVE_GIVEAWAY": "Leave Giveaway",
+  "LEAVE_GIVEAWAY_SUCCESS": "You left the giveaway.",
+  "GIVEAWAY_ALREADY_ENTERED": "You've already entered this giveaway.",
+  "CONGRATULATIONS": "Congratulations!",
+  "GIVEAWAY_RESULTS_DESCRIPTION": "{users} have won {prize}!",
   "8ball": {
     "name": "8बॉल ",
     "description": "8बॉल से सवाल पूछे |",
@@ -407,6 +433,7 @@
   "SUBJECT": "विषय",
   "WHEN_TO_SEND": "कहा से भेजे",
   "DELETE_CONFIRMATION_TITLE": "क्या आप इसे हमेशा के लिए हटाया जाए?!",
+  "DELETE_CONFIRMATION_DESCRIPTION": "This action cannot be undone!",
   "REMINDER_MESSAGE_TITLE": "[{user} से मेसेज है]",
   "reminder_list": {
     "description": "आपकी रिमाइंडर्स की लिस्ट प्राप्त करे |"
@@ -430,10 +457,16 @@
   "PRIVACY_SILENT_LEAVES_DESCRIPTION": "चालू होने पर, आप सर्वर छोड़ते हो तो CRBT अनाउंस नहीं करेगा |",
   "PRIVACY_TELEMETRY_DESCRIPTION": "CRBT logs command usage according to our Privacy Policy. Disabling it stops sending logs.",
   "YOUR_CRBT_DATA": "आपका CRBT डाटा",
-  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT uses your input to provide features. You can download or delete your data, but deleting will erase all your data, including Reminders and Economy.",
-  "PRIVACY_SETTINGS_TITLE": "प्राइवेसी सेटिंग्स",
+  "PRIVACY_CRBT_DATA_DESCRIPTION": "CRBT uses your input to provide features. You can download or delete all of your data, including Reminders, Settings, Economy and more.",
+  "PRIVACY_DOWNLOAD_MY_DATA": "Download my data",
+  "PRIVACY_DELETE_MY_DATA": "Delete my data",
+  "PRIVACY_DESCRIPTION": "CRBT is transparent about the way it collects and uses your data.",
+  "PRIVACY_POLICY_LINK": "Read our Privacy Policy.",
   "settings": {
     "description": "Configure CRBT's Server Settings."
+  },
+  "user settings": {
+    "description": "Customize your CRBT settings."
   },
   "ATTENTION_REQUIRED": "Attention Required",
   "OVERVIEW": "ओवरव्यू",
@@ -464,12 +497,23 @@
   "CHANNEL": "चैनल",
   "EDIT_SOMETHING": "एडिट {feature}",
   "SETTINGS_COLOR_SET_TO": "कलर थीम",
-  "SETTINGS_COLOR_DESCRIPTION": "पोल्स, गिवअवे और चीजों की लुक को कस्टमाइज करे | मैन्युअली कलर को चुने, या फिर CRBT को आपके सर्वर की आइकॉन की मुख्य रंग को एक्सट्रेक्ट करने दे |",
+  "SETTINGS_COLOR_SHORT_DESCRIPTION": "Customize the server's accent color for CRBT features.",
+  "SETTINGS_COLOR_DESCRIPTION": "Customize the look of menus related to your server. Pick a color manually, or let CRBT extract the main color from your server's icon.",
+  "SETTINGS_JOIN_LEAVE_SHORT_DESCRIPTION": "Welcome new members and announce departing members.",
   "SETTINGS_JOIN_LEAVE_DESCRIPTION": "नए मेम्बेर्स को मेसेज ऑटोमेटिकली भेजे और जब मेम्बेर्स आपके सर्वर छोड़ देंगे तो अन्नोउंस करे |",
-  "SETTINGS_MODLOGS_DESCRIPTION": "Get realtime notifications in a chosen channel for all moderator actions taken using CRBT.",
-  "SETTINGS_MODREPORTS_DESCRIPTION": "Members can report a message or user to a chosen channel using Moderation Reports by right-clicking or long-pressing them.",
+  "SETTINGS_MODERATION_SHORT_DESCRIPTION": "Notifications, Reports and History",
+  "SETTINGS_MODLOGS_SHORT_DESCRIPTION": "Get notifications for moderation actions",
+  "SETTINGS_MODLOGS_DESCRIPTION": "When enabled, CRBT will send a message to a channel of your choice when a moderator takes action against a member using CRBT.",
+  "SETTINGS_MODREPORTS_SHORT_DESCRIPTION": "Allow members to report server messages and users",
+  "SETTINGS_MODREPORTS_DESCRIPTION": "When enabled, members can report messages and users by right-clicking or long-pressing them. Reported messages are sent to a channel of your choice and added to the Moderation History.",
+  "SETTINGS_PRIVACY_SHORT_DESCRIPTION": "Manage, download or delete your data.",
+  "SETTINGS_PRIVACY_DESCRIPTION": "CRBT stores its own functional data and some Discord data to provide its features. You can download or delete all of the server's data, including running Giveaways, Moderation History, Economy and everything else.",
+  "SETTINGS_ECONOMY_SHORT_DESCRIPTION": "Manage the server's economy.",
+  "SETTINGS_ECONOMY_DESCRIPTION": "CRBT's economy is a fun way to reward members for being active. You can customize the server's shop. WIP!!",
   "SETTINGS_ERROR_CHANNEL_NOT_FOUND": "चैनल नहीं मिला | मेसेज भेजना जारी रखने के लिए CRBT में एडिट करे |",
   "SETTINGS_ERROR_CONFIG_NOT_DONE": "फीचर पूरी तरह से कांफिगुर नहीं है | नीचे बटन्स को इस्तेमाल करके सेटअप को खत्म करे |",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_CHANNEL": "No channel set. Edit it to enable this feature.",
+  "SETTINGS_ERROR_JOINLEAVE_MISSING_MESSAGE": "No message set. Edit it to enable this feature.",
   "search": {
     "name": "सर्च",
     "description": "वेब में कुछ भी सर्च करे |",
@@ -514,6 +558,7 @@
   "DELETE_MESSAGE": "मेसेज को डिलीट करे",
   "MODREPORTS_SUCCESS_TITLE": "आपकी रिपोर्ट {server} के मॉडरेटर को भेजा गया है |",
   "MODREPORTS_SUCCESS_DESCRIPTION": "It was added to {user}'s Moderation History. Review and action can be taken by those with access to the Moderation Reports channel.",
+  "MODREPORTS_SELECT_MENU": "Choose an action to take.",
   "ROLE_INFO_TITLE": "{role} - रोल की जानकारी",
   "POSITION": "पोजीशन",
   "HUMANS": "इंसान ",
@@ -573,6 +618,7 @@
       }
     }
   },
+  "MESSAGE_FROM_USER": "Message from user",
   "EMOJI_INFO_ERROR_UNKNOWN_TITLE": "Can't find this emoji.",
   "EMOJI_INFO_ERROR_UNKNOWN_DESCRIPTION": "Use a default {standardEmoji} or custom {customEmoji} emoji instead.",
   "EMOJI_INFO_CLONE_SUCCESS": "Added {emoji} to the server.",
@@ -584,6 +630,8 @@
   "SERVER_INVITE": "Server invite",
   "GROUP_DM_INVITE": "Group DM invite",
   "UNNAMED": "Unnamed",
+  "MORE_INFO": "More info",
+  "LANDING_CHANNEL": "Landing channel",
   "INVITE_INFO_ERROR_INVALID_TITLE": "Invalid Discord invite.",
   "INVITE_INFO_ERROR_INVALID_DESCRIPTION": "Make sure it hasn't expired and that it is public.",
   "invite_info": {
@@ -615,5 +663,59 @@
   "SEARCH_ERROR_NO_RESULTS_TITLE": "कोई रिजल्ट नहीं मिला।",
   "SEARCH_ERROR_NO_RESULTS_DESCRIPTION": "Check for spelling errors or for a broader topic.\nNSFW results are hidden outside of age-restricted channels.",
   "DURATION": "Duration",
-  "VIEWS": "व्यूज"
+  "VIEWS": "व्यूज",
+  "lock": {
+    "description": "Makes a channel read-only for @everyone.",
+    "options": {
+      "channel": {
+        "description": "The channel to lock."
+      }
+    }
+  },
+  "LOCK_SUCCESS_TITLE": "Locked {channel}.",
+  "LOCK_SUCCESS_DESCRIPTION_VOICE": "Users will not be able to connect to this channel.",
+  "LOCK_SUCCESS_DESCRIPTION_TEXT": "Users will not be able to send messages in this channel and its threads, or create new threads.",
+  "LOCK_SUCCESS_DESCRIPTION_FORUM": "Users will not be able to send messages in posts, or create new posts.",
+  "LOCK_SUCCESS_DESCRIPTION_COMMAND": "Use {command} to unlock this channel.",
+  "LOCK_SUCCESS_DESCRIPTION_WARNING": "Administrators, and roles overwriting the channel's permissions, will be immune.",
+  "LOCK_ERROR_ALREADY_LOCKED_TITLE": "This channel is already locked.",
+  "LOCK_ERROR_ALREADY_LOCKED_DESCRIPTION": "The 'Send Messages', 'Connect' or 'Create Threads/Posts' permission(s) is/are already denied for @everyone.",
+  "unlock": {
+    "description": "Unlocks a channel's view & connect permissions for @everyone.",
+    "options": {
+      "channel": {
+        "description": "The channel to unlock."
+      }
+    }
+  },
+  "UNLOCK_SUCCESS_TITLE": "Unlocked {channel}.",
+  "UNLOCK_SUCCESS_DESCRIPTION": "All write & connect permissions were restored.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_TITLE": "This channel is already unlocked.",
+  "UNLOCK_ERROR_ALREADY_UNLOCKED_DESCRIPTION": "The 'Send Messages', 'Connect' or 'Create Threads/Posts' permission(s) is/are already allowed for @everyone.",
+  "MOD_NOTIFICATION_LOCK_TITLE": "{channel} was locked",
+  "MOD_NOTIFICATION_UNLOCK_TITLE": "{channel} was unlocked",
+  "MOD_NOTIFICATION_CLEAR_TITLE": "{messages} messages were cleared in {channel}",
+  "BULK_DELETE": "Bulk Delete",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_TITLE": "Do you really want to delete all of the CRBT data for {guildName}?",
+  "GUILD_PRIVACY_DELETE_DATA_CONFIRM_DESCRIPTION": "By confirming, you will forever delete:",
+  "DELETE_DATA": "Delete data",
+  "DOWNLOAD_ALL_DATA": "Download all data",
+  "MODERATION_HISTORY": "Moderation History",
+  "X_GIVEAWAYS": "{number} giveaways",
+  "ENTIRETY_OF_MODERATION_HISTORY": "The entirety of the server's Moderation History",
+  "X_MODERATION_HISTORY_ENTRIES": "{number} entries",
+  "X_SETTINGS": "{number} settings (Theming, Moderation, Economy...)",
+  "X_ECONOMY_ITEMS_CATEGORIES": "{categories} Shop categories containing {items} items",
+  "X_ACHIEVEMENTS": "{categories} Achievement categories containing {achievements} achievements",
+  "DELETE_DATA_SUCCESS": "The selected data was successfully deleted or reset.",
+  "DELETE_DATA_ERROR": "An error occurred while deleting the data.",
+  "GUILD_NO_DATA": "No data about the server was found.",
+  "ITEM_TYPE_ROLE": "रोल",
+  "ITEM_TYPE_WEAPON": "Weapon",
+  "ITEM_TYPE_INCOME_MULTIPLIER": "Income Multiplier",
+  "ITEM_TYPE_WEBHOOK_ACTION": "Webhook Action",
+  "ITEM_TYPE_CRBTSCRIPT": "CRBTscript Action",
+  "ITEM_TYPE_COSMETIC": "Cosmetic",
+  "ITEM_TYPE_OTHER": "Other",
+  "LOADING_TITLE": "Loading (this may take up to a minute)..."
 }
